@@ -140,3 +140,5 @@ export {default as facadeOptionC} from './facadeOptionC.png'
 export {default as featherLoader} from './feather_loader.png'
 
 export {default as videoSmall} from './video-small.png'
+
+export {default as logoBelmonteWhite} from './logo-white-belmonte.png'

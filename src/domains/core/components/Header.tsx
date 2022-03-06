@@ -1,4 +1,4 @@
-import { AppBar, Button, createStyles, makeStyles, Theme, Toolbar, Drawer, IconButton, MenuItem, MenuList, Popper, Grow, Paper, ClickAwayListener } from '@material-ui/core';
+import { AppBar, Button, createStyles, makeStyles, Theme, Toolbar, Drawer, IconButton, MenuItem, MenuList, Popper, Grow, Paper, ClickAwayListener, Grid } from '@material-ui/core';
 import { Link, RouteComponentProps, withRouter } from 'react-router-dom';
 import PersonIcon from '@material-ui/icons/Person';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
@@ -12,6 +12,7 @@ import whiteLogo from 'assets/logo-small-white.png';
 import { Fragment, useState, useRef } from 'react';
 import { useAuth0 } from '@auth0/auth0-react';
 import CloseIcon from '@material-ui/icons/Close';
+import { logoBelmonteWhite } from 'assets';
 
 
 const drawerWidth = 300;
@@ -20,7 +21,7 @@ const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     header: {
       padding: '20px 0',
-      background: 'transparent',
+      background: '#0E3411',
     },
     menuButton: {
       marginLeft: 'auto',
@@ -65,7 +66,7 @@ const useStyles = makeStyles((theme: Theme) =>
       display: 'none',
     },
     root: {
-      color: "#000000"
+      color: "#ffffff"
     },
     icon: {
       fontSize: "35px !important"
@@ -103,7 +104,7 @@ const useStyles = makeStyles((theme: Theme) =>
     imgLogo: {
       marginRight: 10
     },
-    bottomText:{
+    bottomText: {
       position: 'absolute',
       bottom: 10,
       textAlign: 'center',
@@ -147,7 +148,7 @@ const Header = (props: RouteComponentProps) => {
   }
 
   const handleDrawerOpen = () => {
-    setOpen(true);
+    // setOpen(true);
   };
 
   const handleDrawerClose = () => {
@@ -179,23 +180,31 @@ const Header = (props: RouteComponentProps) => {
       <Fragment>
         <AppBar position="static" elevation={0} className={classes.header}>
           <Toolbar variant="regular">
-            <Link to="/register">
-              <img src={isHome || isRegister || isSignUp || isWaiting || isAbout ? logo : whiteLogo} alt="logo" width={50} />
-            </Link>
+            <Grid xs={11} container justify="center">
+              <Link to="/register">
 
-            {!(isSignUp || isWaiting || isAbout) ?
-              <div className={classes.menuButton}>
-                <IconButton
-                  edge="end"
-                  color="secondary"
-                  aria-label="menu"
-                  onClick={handleDrawerOpen}
-                  className={clsx(classes.menuButton2 && classes.root, open && classes.hide)}
-                >
-                  <MenuIcon className={classes.icon} />
-                </IconButton>
-              </div> : null
-            }
+                <img src={logoBelmonteWhite} alt="logo" width={70} />
+                {/* <img src={isHome || isRegister || isSignUp || isWaiting || isAbout ? logo : whiteLogo} alt="logo" width={50} /> */}
+              </Link>
+            </Grid>
+            <Grid xs={1}>
+              {!(isSignUp || isWaiting || isAbout) ?
+                <div className={classes.menuButton}>
+                  <IconButton
+                    edge="end"
+                    color="secondary"
+                    aria-label="menu"
+                    onClick={handleDrawerOpen}
+                    className={clsx(classes.menuButton2 && classes.root, open && classes.hide)}
+                  >
+                    <MenuIcon className={classes.icon} />
+                  </IconButton>
+                </div> : null
+              }
+            </Grid>
+
+
+
 
 
             <Drawer
@@ -238,7 +247,7 @@ const Header = (props: RouteComponentProps) => {
                           <MenuItem className={classes.itemText}>Sign up</MenuItem>
                         </Button>
                         <br />
-                        <img src={logo} alt="logo" width={50} className={classes.imgLogo}/>
+                        <img src={logo} alt="logo" width={50} className={classes.imgLogo} />
                         <p className={classes.bottomText}>Copyright &copy; 2021 rea. All rights reserved</p>
                       </div>
                     </div>

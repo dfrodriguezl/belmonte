@@ -50,6 +50,10 @@ const useStyles = makeStyles((theme: Theme) =>
       width: '100vw',
       height: '100vh'
     },
+    containerStyle: {
+      paddingLeft: 0,
+      paddingRight: 0
+    }
   })
 );
 
@@ -85,8 +89,8 @@ const PageContainer = (props: Props) => {
 
   return (
     <div className={background} style={(isAbout || isDetails || isStep1 || isListProjects || isUploadShape || isStep2 || isStep3 || isChooseFacade) ? { overflow: 'auto' } : expandAdvanced}>
-      <Container>
-        <Grid container direction="column" alignItems="stretch" className={classes.pageContainer} >
+      <Container className={classes.containerStyle}>
+        <Grid container direction="column" className={classes.pageContainer} >
           {
             !noHeader &&
             <Grid item>
