@@ -15,3 +15,5 @@ export { default as HomeSub3 } from './HomeSub3';
 export { default as BlackContainer } from './BlackContainer';
 export { default as Facade } from './Facade';
 export { default as Loading } from './Loading';
+export { default as HomeSup } from './HomeSup';
+export { default as HomeSup2 } from './HomeSup2';

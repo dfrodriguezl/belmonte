@@ -149,17 +149,17 @@ const FormMail = (props: Props) => {
 
   return (
     <RegisterContainer>
-      <Grid item container sm={12} xs={10} className={classes.containerForm}>
-        <Typography>
-          <h2 style={{ lineHeight: 1.2, fontWeight: 'bold' }} className={smallScreen ? classes.textCenter : ''}>SUSTAINABLE CITIES <br /> BEGIN WITH SMART DEVELOPMENT</h2>
+      {/* <Grid item container sm={12} xs={10} className={classes.containerForm}> */}
+        {/* <Typography>
+          <h2 style={{ lineHeight: 1.2, fontWeight: 'bold' }} className={smallScreen ? classes.textCenter : ''}>Pastas Artesanales para recetas fescas y sanas en la puerta de tu casa*.</h2>
           {smallScreen ? null :
             <h4 style={{ lineHeight: 1.0, fontWeight: 'normal' }}> Real state developers and property owners access <br /> <span className={classes.boldText}>an instant property feasibility & pre-design housing project.</span></h4>}
-        </Typography>
-      </Grid>
+        </Typography> */}
+      {/* </Grid> */}
       {/* {smallScreen ?
         <ImgVideo></ImgVideo> : null} */}
-      <Grid item sm={12} xs={12} style={{ alignSelf: 'flex-end' }}>
-        <form
+      {/* <Grid item sm={12} xs={12} style={{ alignSelf: 'flex-end' }}> */}
+        {/* <form
           action="https://rea-web.us6.list-manage.com/subscribe/post?u=3c39cbec5fc9d998a5b584676&amp;id=4064b46da9"
           method="post"
           id="mc-embedded-subscribe-form"
@@ -167,25 +167,25 @@ const FormMail = (props: Props) => {
           className="validate"
           target="_blank"
           onSubmit={handleSubmit}
-        >
-          {status === "success" || status === "error" ?
-            history.push("/waiting/" + firstName + "_" + lastName) : null}
-          {!smallScreen ?
+        > */}
+          {/* {status === "success" || status === "error" ?
+            history.push("/waiting/" + firstName + "_" + lastName) : null} */}
+          {/* {!smallScreen ?
             <Fragment>
               <Input type="text" name="FNAME" id="mce-FNAME" placeholder="First name" onChange={handleChange1} className={classes.input} disableUnderline required />
               <Input type="text" name="LNAME" id="mce-LNAME" placeholder="Last Name" onChange={handleChange2} className={classes.input} disableUnderline required />
             </Fragment>
-            : null}
+            : null} */}
 
-          <div>
+          {/* <div>
             <div className="response" id="mce-error-response" style={{ display: 'none' }}></div>
             <div className="response" id="mce-success-response" style={{ display: 'none' }}></div>
           </div>
           <div style={{ position: 'absolute', left: -5000 }} aria-hidden="true">
             <input type="text" name="b_3c39cbec5fc9d998a5b584676_4064b46da9" />
-          </div>
-          {smallScreen ? <p className={clsx(classes.textCenter, true && classes.fontText, true)}>Generate a custom multifamily development on your lot in real time</p> : null}
-          <Input type="text" name="EMAIL" id="mce-EMAIL"
+          </div> */}
+          {/* {smallScreen ? <p className={clsx(classes.textCenter, true && classes.fontText, true)}>Generate a custom multifamily development on your lot in real time</p> : null} */}
+          {/* <Input type="text" name="EMAIL" id="mce-EMAIL"
             onChange={handleChange3}
             placeholder={!smallScreen ? "Enter email to sign up" : "Enter your email"}
             // className={classes.input}
@@ -204,21 +204,20 @@ const FormMail = (props: Props) => {
                   >
                     Join us
                   </Button>
-                  {/* <IconButton className={classes.iconButton} type="submit" name="subscribe">
-                  <ArrowForwardIcon className={classes.icon}></ArrowForwardIcon>
-                </IconButton> */}
-                </InputAdornment> : null
+                </InputAdornment> 
+                : 
+                null
             }
-          />
-          {smallScreen ? <Grid xs={12} container justify="center">
+          /> */}
+          {/* {smallScreen ? <Grid xs={12} container justify="center">
             <Button className={classes.buttonGreen} type="submit" name="subscribe">
               <p className={classes.itemText}>Get Started</p>
             </Button>
-          </Grid> : null}
-        </form>
-        {!smallScreen ?
-          <p className={classes.endText}>We are currently in beta, sign up to our waiting list.</p> : null}
-      </Grid>
+          </Grid> : null} */}
+        {/* </form> */}
+        {/* {!smallScreen ?
+          <p className={classes.endText}>We are currently in beta, sign up to our waiting list.</p> : null} */}
+      {/* </Grid> */}
     </RegisterContainer>
 
   )

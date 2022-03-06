@@ -142,3 +142,5 @@ export {default as featherLoader} from './feather_loader.png'
 export {default as videoSmall} from './video-small.png'
 
 export {default as logoBelmonteWhite} from './logo-white-belmonte.png'
+export {default as Home1} from './home-1.png'
+export {default as Home2} from './home-2.png'

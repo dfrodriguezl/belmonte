@@ -81,7 +81,7 @@ const RegisterContainer = (props: OwnProps) => {
         }
 
       </PageContainer>
-      {
+      {/* {
         !isWaiting ?
           <Fragment>
             <HomeSub2 />
@@ -89,7 +89,7 @@ const RegisterContainer = (props: OwnProps) => {
             <HomeSub1 />
           </Fragment>
           : null
-      }
+      } */}
 
     </Fragment>
 

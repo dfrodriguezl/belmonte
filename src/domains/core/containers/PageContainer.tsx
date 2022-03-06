@@ -4,13 +4,14 @@ import { setExpandAdvanced } from 'domains/shapeDiver/slice';
 import { connect } from 'react-redux';
 import { RootState } from 'app/store';
 import { useHistory } from 'react-router-dom';
+import HomeSup from './HomeSup';
 
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     pageContainer: {
-      minHeight: '100vh',
-      height: '100vh',
+      // minHeight: '100vh',
+      // height: '100vh',
       width: '100%',
       margin: 0,
       [theme.breakpoints.down('sm')]: {
@@ -47,8 +48,8 @@ const useStyles = makeStyles((theme: Theme) =>
       top: 0,
       left: 0,
       zIndex: -1,
-      width: '100vw',
-      height: '100vh'
+      // width: '100vw',
+      // height: '100vh'
     },
     containerStyle: {
       paddingLeft: 0,
@@ -88,7 +89,7 @@ const PageContainer = (props: Props) => {
   const isChooseFacade = history.location.pathname.indexOf('chooseFacade') > -1;
 
   return (
-    <div className={background} style={(isAbout || isDetails || isStep1 || isListProjects || isUploadShape || isStep2 || isStep3 || isChooseFacade) ? { overflow: 'auto' } : expandAdvanced}>
+    <div className={background} style={(isAbout || isDetails || isStep1 || isListProjects || isUploadShape || isStep2 || isStep3 || isChooseFacade) ? { overflow: 'none' } : { overflow: 'none' } }>
       <Container className={classes.containerStyle}>
         <Grid container direction="column" className={classes.pageContainer} >
           {
@@ -97,9 +98,15 @@ const PageContainer = (props: Props) => {
               <Header />
             </Grid>
           }
-          <Grid item container className={classes.bodyContainer} justify="center">
-            {children}
+          <Grid item container direction="row">
+            <HomeSup />
           </Grid>
+          {/* <Grid item>
+            <HomeSup2 />
+          </Grid> */}
+          {/* <Grid item container className={classes.bodyContainer} justify="center">
+            {children}
+          </Grid> */}
         </Grid>
       </Container>
     </div>
