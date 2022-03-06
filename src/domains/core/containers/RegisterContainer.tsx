@@ -8,6 +8,8 @@ import useMediaQuery from '@material-ui/core/useMediaQuery';
 import { useTheme } from '@material-ui/core/styles';
 import { HomeSub1 } from 'domains/core/containers';
 import { ImgVideo } from 'domains/common/components';
+import HomeSub2 from './HomeSub2';
+import HomeSub3 from './HomeSub3';
 
 const useStyles = makeStyles((theme) => ({
   fab: {
@@ -51,7 +53,7 @@ const RegisterContainer = (props: OwnProps) => {
 
   return (
     <Fragment>
-      <PageContainer background="waiting-back">
+      <PageContainer background={smallScreen ? "home-register" : "waiting-back"}>
         <Grid container item sm={12} xs={12} style={{ marginTop: 50 }}>
           <Grid container item sm={6} xs={12} className={classes.textContainer}>
             {children}
@@ -81,7 +83,12 @@ const RegisterContainer = (props: OwnProps) => {
       </PageContainer>
       {
         !isWaiting ?
-          <HomeSub1 /> : null
+          <Fragment>
+            <HomeSub2 />
+            <HomeSub3 />
+            <HomeSub1 />
+          </Fragment>
+          : null
       }
 
     </Fragment>

@@ -1,4 +1,4 @@
-import { juan, felix, alex, sebastien, lucas, ula, diego, radhi } from 'assets';
+import { juan, felix, alex, sebastien, lucas, ula, diego, radhi, facadeOptionA, facadeOptionB, facadeOptionC } from 'assets';
 
 export interface SearchParams {
   location: LocationSimple | undefined;
@@ -84,6 +84,7 @@ export interface LocationSimple {
   islandSpacings: number;
   floorsAlignment: number;
   unitsOrganization: number;
+  balconyType?: number;
 }
 
 export interface Density {
@@ -91,6 +92,14 @@ export interface Density {
   subLabel: string;
   value: number;
   type: string;
+}
+
+export interface Terrain {
+  name?: string;
+  owner?: string;
+  path?: string;
+  location?: LocationSimple;
+  densityGeneral?: number;
 }
 
 export const Densities = [
@@ -180,3 +189,23 @@ export const teamMembers = [
     picture: radhi
   }
 ]
+
+export const carouselItem = [
+  {
+    id: 0,
+    img: facadeOptionA,
+    name: 'Option A'
+  },
+  {
+    id: 1,
+    img: facadeOptionB,
+    name: 'Option B'
+  },
+  {
+    id: 2,
+    img: facadeOptionC,
+    name: 'Option C'
+  }
+]
+
+
