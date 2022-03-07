@@ -11,7 +11,7 @@ const styles = makeStyles((theme: Theme) => ({
     textTransform: 'none',
     borderWidth: 2,
     background: '#ffffff',
-    padding: '5px 20px',
+    padding: '5px 40px',
     fontWeight: 'bolder'
   }
 }))

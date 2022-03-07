@@ -25,7 +25,8 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     menuButton: {
       marginLeft: 'auto',
-      border: '1px white'
+      border: '1px white',
+      marginRight: 10
     },
     member: {
       fontSize: 14,
@@ -187,7 +188,7 @@ const Header = (props: RouteComponentProps) => {
                 {/* <img src={isHome || isRegister || isSignUp || isWaiting || isAbout ? logo : whiteLogo} alt="logo" width={50} /> */}
               </Link>
             </Grid>
-            <Grid xs={1}>
+            <Grid xs={1} justify="flex-start">
               {!(isSignUp || isWaiting || isAbout) ?
                 <div className={classes.menuButton}>
                   <IconButton

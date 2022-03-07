@@ -15,8 +15,8 @@ const useStyles = makeStyles((theme: Theme) =>
       width: '100%',
       margin: 0,
       [theme.breakpoints.down('sm')]: {
-        minHeight: '80vh',
-        height: '90vh'
+        // minHeight: '80vh',
+        // height: '90vh'
       },
     },
     pageContainerExcept: {
@@ -25,8 +25,8 @@ const useStyles = makeStyles((theme: Theme) =>
       width: '100%',
       margin: 0,
       [theme.breakpoints.down('sm')]: {
-        minHeight: '80vh',
-        height: '90vh'
+        // minHeight: '80vh',
+        // height: '90vh'
       },
     },
     headerContainer: {

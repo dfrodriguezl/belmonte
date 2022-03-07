@@ -99,9 +99,9 @@ const Footer = (props: Props) => {
               <Box component="span" fontSize={14} lineHeight={1.7} className={classes.item}><Link className={classes.itemInactive} to="/contact-us">Contact</Link></Box> */}
 
             </Grid>
-            <Grid item container xs={12} justify='center' className={classes.colorIcon}>
-              <a href={"https://wa.me/573508214036?text=" + messageWpp} className={classes.links} target="_blank" rel="noreferrer">
-                <Typography variant="subtitle1">Whatsapp | 350 821 4036</Typography>
+            <Grid item container xs={12} justify='center'>
+              <a href={"https://wa.me/573508214036?text=" + messageWpp} target="_blank" rel="noreferrer">
+                <Typography variant="subtitle1" className={classes.colorIcon}>Whatsapp | 350 821 4036</Typography>
               </a>
 
             </Grid>
