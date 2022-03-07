@@ -1,9 +1,10 @@
 import React from 'react';
-import { Container, Grid, Box, Paper, makeStyles, Button, Theme, useTheme, useMediaQuery, Typography } from '@material-ui/core';
+import { Container, Grid, Box, Paper, makeStyles, Button, Theme, useTheme, useMediaQuery, Typography, Avatar } from '@material-ui/core';
 import { useHistory } from 'react-router-dom';
 import { ArrowForward } from '@material-ui/icons';
 import { basicVolume, Home1, Home2, interior, Step21 } from 'assets';
 import ButtonRequest from 'domains/common/components/ButtonRequest';
+import MessageIcon from '@material-ui/icons/Message';
 
 const styles = makeStyles((theme: Theme) => ({
   image: {
@@ -103,6 +104,14 @@ const styles = makeStyles((theme: Theme) => ({
   textDomicilio: {
     marginTop: 15,
     padding: '10px 10px'
+  },
+  avatar: {
+    position: 'absolute',
+    bottom: 50,
+    right: 50,
+    background: '#0E3411',
+    width: theme.spacing(7),
+    height: theme.spacing(7),
   }
 }));
 
@@ -114,6 +123,7 @@ const HomeSup = () => {
   const isWaiting = history.location.pathname.indexOf('register') > -1;
   const theme = useTheme();
   const smallScreen = useMediaQuery(theme.breakpoints.down("sm"));
+  const messageWpp = 'Hola Belmonte!!!, quiero hacer mi pedido, que tienes para esta semana?';
 
   const handleScroll = () => {
     window.scroll({
@@ -217,13 +227,22 @@ const HomeSup = () => {
           <Grid item container justify="center" className={classes.background}>
             <Typography className={classes.textContent}>Pastas Artesanales para recetas frescas y sanas en la puerta de tu casa*.</Typography>
             <Grid xs={12} container justify="center">
-              <img src={Home2} alt="Home 2" style={{ display: 'inline-block' }} width="40%"/>
-              <img src={Home1} alt="Home 1" style={{ display: 'inline-block' }} width="60%"/>
+              <a href={"https://wa.me/573508214036?text=" + messageWpp} target="_blank" rel="noreferrer">
+                <img src={Home2} alt="Home 2" style={{ display: 'inline-block' }} width="40%" />
+                <img src={Home1} alt="Home 1" style={{ display: 'inline-block' }} width="60%" />
+              </a>
+
               <ButtonRequest />
               {/* <br /> */}
               <Typography variant="subtitle2" className={classes.textDomicilio}>Servicio domicilio incluido en Bogotá: Rosales, Usaquén, Cedritos y Chia *.</Typography>
+              <a href={"https://wa.me/573508214036?text=" + messageWpp} target="_blank" rel="noreferrer">
+                <Avatar className={classes.avatar} >
+                  <MessageIcon fontSize='large' />
+                </Avatar>
+              </a>
+
             </Grid>
-            
+
 
             {/* <Grid className={classes.circle}>
               <img src={basicVolume} alt="" className={classes.imgSmall} />

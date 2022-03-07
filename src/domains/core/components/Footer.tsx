@@ -1,11 +1,12 @@
 import React, { Fragment } from 'react';
 import { compose } from 'recompose';
-import { Box, Container, createStyles, Grid, makeStyles, Theme } from '@material-ui/core';
+import { Box, Container, createStyles, Grid, makeStyles, Theme, Typography } from '@material-ui/core';
 import { Link, RouteComponentProps, withRouter } from 'react-router-dom';
 import { Facebook, Instagram, LinkedIn } from '@material-ui/icons';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import { useTheme } from '@material-ui/core/styles';
 import clsx from 'clsx';
+import InstagramIcon from '@material-ui/icons/Instagram';
 
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -13,7 +14,7 @@ const useStyles = makeStyles((theme: Theme) =>
     root: {
       display: 'flex',
       flexDirection: 'row',
-      backgroundColor: '#010100'
+      backgroundColor: '#E3E3E3'
     },
     footer: {
       fontSize: 12,
@@ -57,6 +58,14 @@ const useStyles = makeStyles((theme: Theme) =>
     itemInactive: {
       color: '#434343 !important',
       pointerEvents: 'none',
+    },
+    colorIcon: {
+      color: '#0E3411',
+      marginTop: 15
+    },
+    colorIconBold: {
+      color: '#0E3411',
+      fontWeight: 'bolder'
     }
   })
 );
@@ -70,19 +79,36 @@ const Footer = (props: Props) => {
   const classes = useStyles()
   const theme = useTheme();
   const smallScreen = useMediaQuery(theme.breakpoints.down("sm"));
+  const messageWpp = 'Hola Belmonte!!!, quiero hacer mi pedido, que tienes para esta semana?';
+
 
   return (
     <Grid container item className={classes.root} xs={12}>
       <Container maxWidth="lg">
         <footer className={classes.footer}>
           <Grid container>
-            <Grid item xs={12} sm={6}>
-              <Box component="span" fontSize={14} lineHeight={1.7} className={classes.item}><Link to="/about">About</Link></Box>
+            <Grid item container xs={12} sm={6} justify='center'>
+              <a href="https://www.instagram.com/belmonteartesanal/" className={classes.links} target="_blank" rel="noreferrer">
+                <InstagramIcon fontSize='large' className={classes.colorIconBold} />
+              </a>
+
+              <br />
+              {/* <Box component="span" fontSize={14} lineHeight={1.7} className={classes.item}><Link to="/about">About</Link></Box>
               <Box component="span" fontSize={14} lineHeight={1.7} className={classes.item}><Link className={classes.itemInactive} to="/how-it-works">How it works</Link></Box>
               <Box component="span" fontSize={14} lineHeight={1.7} className={classes.item}><Link className={classes.itemInactive} to="/news">News</Link></Box>
-              <Box component="span" fontSize={14} lineHeight={1.7} className={classes.item}><Link className={classes.itemInactive} to="/contact-us">Contact</Link></Box>
+              <Box component="span" fontSize={14} lineHeight={1.7} className={classes.item}><Link className={classes.itemInactive} to="/contact-us">Contact</Link></Box> */}
+
             </Grid>
-            {smallScreen ?
+            <Grid item container xs={12} justify='center' className={classes.colorIcon}>
+              <a href={"https://wa.me/573508214036?text=" + messageWpp} className={classes.links} target="_blank" rel="noreferrer">
+                <Typography variant="subtitle1">Whatsapp | 350 821 4036</Typography>
+              </a>
+
+            </Grid>
+            <Grid item container xs={12} justify='center' className={classes.colorIconBold}>
+              <Typography variant="h6">B E L M O N T E</Typography>
+            </Grid>
+            {/* {smallScreen ?
               <Fragment>
                 <SocialNetwork classes={classes} />
                 <Grid item xs={12} sm={5}>
@@ -103,7 +129,7 @@ const Footer = (props: Props) => {
                 </Grid>
                 <SocialNetwork classes={classes} />
               </Fragment>
-            }
+            } */}
           </Grid>
 
         </footer>
