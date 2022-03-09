@@ -6,7 +6,6 @@ import history from 'app/history';
 import { Provider } from 'react-redux';
 import { Router, Route } from 'react-router-dom';
 import * as serviceWorker from './serviceWorker';
-import Auth0 from 'app/Auth0';
 
 import './index.css';
 import 'fontsource-roboto';

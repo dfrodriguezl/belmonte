@@ -7,8 +7,8 @@ import clsx from 'clsx';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import { useTheme } from '@material-ui/core/styles';
 
-import logo from 'assets/logo-small.png';
-import whiteLogo from 'assets/logo-small-white.png';
+// import logo from 'assets/logo-small.png';
+// import whiteLogo from 'assets/logo-small-white.png';
 import { Fragment, useState, useRef } from 'react';
 import { useAuth0 } from '@auth0/auth0-react';
 import CloseIcon from '@material-ui/icons/Close';
@@ -248,7 +248,7 @@ const Header = (props: RouteComponentProps) => {
                           <MenuItem className={classes.itemText}>Sign up</MenuItem>
                         </Button>
                         <br />
-                        <img src={logo} alt="logo" width={50} className={classes.imgLogo} />
+                        {/* <img src={logo} alt="logo" width={50} className={classes.imgLogo} /> */}
                         <p className={classes.bottomText}>Copyright &copy; 2021 rea. All rights reserved</p>
                       </div>
                     </div>
@@ -275,7 +275,7 @@ const Header = (props: RouteComponentProps) => {
       <AppBar position="static" elevation={0} className={classes.header}>
         <Toolbar variant="regular">
           <Link to="/register">
-            <img src={isHome || isRegister || isSignUp || isWaiting || isAbout ? logo : whiteLogo} alt="logo" width={100} />
+            {/* <img src={isHome || isRegister || isSignUp || isWaiting || isAbout ? logo : whiteLogo} alt="logo" width={100} /> */}
           </Link>
           {
             !(isSignUp) ?
