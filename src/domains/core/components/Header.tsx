@@ -184,7 +184,7 @@ const Header = (props: RouteComponentProps) => {
             <Grid xs={11} container justify="center">
               <Link to="/register">
 
-                <img src={logoBelmonteWhite} alt="logo" width={70} />
+                <img src={logoBelmonteWhite} alt="logo" width={100} />
                 {/* <img src={isHome || isRegister || isSignUp || isWaiting || isAbout ? logo : whiteLogo} alt="logo" width={50} /> */}
               </Link>
             </Grid>
