@@ -97,7 +97,7 @@ a {
 }
 
 .img-landing-small {
-  background-image: url(assets/video-small.png);
+  /* background-image: url(assets/video-small.png); */
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover; 
@@ -105,7 +105,7 @@ a {
 }
 
 .img-team {
-  background-image: url(assets/team.png);
+  /* background-image: url(assets/team.png); */
   background-repeat: no-repeat;
   background-position: center bottom -45px;
   background-size: cover; 
@@ -114,7 +114,7 @@ a {
 
 @media screen and (max-width: 600px) {
   .img-team {
-    background-image: url(assets/team.png);
+    /* background-image: url(assets/team.png); */
     background-repeat: no-repeat;
     background-position: center bottom -30px;
     background-size: cover; 

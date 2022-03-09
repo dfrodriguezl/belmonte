@@ -6,10 +6,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import KeyboardArrowDown from '@material-ui/icons/KeyboardArrowDown';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import { useTheme } from '@material-ui/core/styles';
-import { HomeSub1 } from 'domains/core/containers';
 import { ImgVideo } from 'domains/common/components';
-import HomeSub2 from './HomeSub2';
-import HomeSub3 from './HomeSub3';
 
 const useStyles = makeStyles((theme) => ({
   fab: {
@@ -81,15 +78,6 @@ const RegisterContainer = (props: OwnProps) => {
         }
 
       </PageContainer>
-      {/* {
-        !isWaiting ?
-          <Fragment>
-            <HomeSub2 />
-            <HomeSub3 />
-            <HomeSub1 />
-          </Fragment>
-          : null
-      } */}
 
     </Fragment>
 
