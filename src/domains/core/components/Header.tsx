@@ -181,14 +181,14 @@ const Header = (props: RouteComponentProps) => {
       <Fragment>
         <AppBar position="static" elevation={0} className={classes.header}>
           <Toolbar variant="regular">
-            <Grid xs={11} container justify="center">
+            <Grid xs={11} item container justify="center">
               <Link to="/register">
 
                 <img src={logoBelmonteWhite} alt="logo" width={100} />
                 {/* <img src={isHome || isRegister || isSignUp || isWaiting || isAbout ? logo : whiteLogo} alt="logo" width={50} /> */}
               </Link>
             </Grid>
-            <Grid xs={1} justify="flex-start">
+            <Grid xs={1} item container justify="flex-start">
               {!(isSignUp || isWaiting || isAbout) ?
                 <div className={classes.menuButton}>
                   <IconButton

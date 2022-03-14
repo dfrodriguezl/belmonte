@@ -23,14 +23,15 @@ interface OwnProps {
 type Props = OwnProps;
 const ButtonRequest = (props: Props) => {
   const classes = styles();
-  const { actionButton } = props;
   const messageWpp = 'Hola Belmonte!!!, quiero hacer mi pedido, que tienes para esta semana?';
 
+  const goToWpp = () => {
+    window.open("https://wa.me/573508214036?text=" + messageWpp, "_blank");
+  }
+
   return (
-    <Button variant="outlined" className={classes.button} onClick={actionButton}>
-      <a href={"https://wa.me/573508214036?text=" + messageWpp} target="_blank" rel="noreferrer">
-        Haz tu pedido
-      </a>
+    <Button variant="outlined" className={classes.button} onClick={() => goToWpp()}>
+      Haz tu pedido
     </Button>
   )
 }
