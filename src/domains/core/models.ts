@@ -122,3 +122,30 @@ export const Densities = [
   }
 ]
 
+export const Productos = [
+  {
+    name: 'Duomo Kit.',
+    subtitle: 'Cena excepcional para 3.',
+    ingredients: [
+      "1 Pasta Belmonte (Fetuccine o Fusilli).",
+      "1 Salsa Belmonte (Tocineta ahumada o Cuatro Quesos o Napolitana)."
+    ]
+  },
+  {
+    name: 'Pantheon Kit.',
+    subtitle: 'Cena excepcional para 6.',
+    ingredients: [
+      "2 Pasta Belmonte (Fetuccine o Fusilli).",
+      "2 Salsa Belmonte (Tocineta ahumada o Cuatro Quesos o Napolitana)."
+    ]
+  },
+  {
+    name: 'Milano Kit.',
+    subtitle: 'Cena excepcional para 3.',
+    ingredients: [
+      "1 Raviolli Belmonte (Carne o Pollo).",
+      "1 Salsa Belmonte (Tocineta ahumada o Cuatro Quesos o Napolitana)."
+    ]
+  }
+]
+
