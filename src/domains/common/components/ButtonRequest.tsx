@@ -1,5 +1,6 @@
 import { Button, makeStyles, Theme } from '@material-ui/core';
 import React from 'react';
+import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 
 
 const styles = makeStyles((theme: Theme) => ({
@@ -31,7 +32,7 @@ const ButtonRequest = (props: Props) => {
 
   return (
     <Button variant="outlined" className={classes.button} onClick={() => goToWpp()}>
-      Haz tu pedido
+      Pídelo &nbsp; <ShoppingCartIcon fontSize="small"/>
     </Button>
   )
 }

@@ -4,6 +4,7 @@ import { useHistory } from 'react-router-dom';
 import { Home1, Home2 } from 'assets';
 import ButtonRequest from 'domains/common/components/ButtonRequest';
 import MessageIcon from '@material-ui/icons/Message';
+import CarouselProducts from 'domains/common/components/CarouselProducts';
 
 const styles = makeStyles((theme: Theme) => ({
   background: {
@@ -50,9 +51,11 @@ const HomeSup = () => {
           <Grid item container justify="center" className={classes.background}>
             <Typography className={classes.textContent}>Pastas Artesanales para recetas frescas y sanas en la puerta de tu casa*.</Typography>
             <Grid xs={12} item container justify="center">
-              <a href={"https://wa.me/573508214036?text=" + messageWpp} target="_blank" rel="noreferrer">
-                <img src={Home2} alt="Home 2" style={{ display: 'inline-block' }} width="40%" height="80%" />
-                <img src={Home1} alt="Home 1" style={{ display: 'inline-block' }} width="60%" height="80%" />
+              {/* <a href={"https://wa.me/573508214036?text=" + messageWpp} target="_blank" rel="noreferrer"> */}
+                <a>
+                {/* <img src={Home2} alt="Home 2" style={{ display: 'inline-block' }} width="40%" height="80%" />
+                <img src={Home1} alt="Home 1" style={{ display: 'inline-block' }} width="60%" height="80%" /> */}
+                <CarouselProducts />
                 <Grid xs={12} container item justify="center">
                   <ButtonRequest />
                 </Grid>

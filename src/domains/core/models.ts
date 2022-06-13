@@ -1,3 +1,5 @@
+import { DuomoProduct, MilanoProduct, PantheonProduct } from "assets";
+
 export interface SearchParams {
   location: LocationSimple | undefined;
   area: number;
@@ -129,7 +131,8 @@ export const Productos = [
     ingredients: [
       "1 Pasta Belmonte (Fetuccine o Fusilli).",
       "1 Salsa Belmonte (Tocineta ahumada o Cuatro Quesos o Napolitana)."
-    ]
+    ],
+    img: DuomoProduct
   },
   {
     name: 'Pantheon Kit.',
@@ -137,7 +140,8 @@ export const Productos = [
     ingredients: [
       "2 Pasta Belmonte (Fetuccine o Fusilli).",
       "2 Salsa Belmonte (Tocineta ahumada o Cuatro Quesos o Napolitana)."
-    ]
+    ],
+    img: PantheonProduct
   },
   {
     name: 'Milano Kit.',
@@ -145,7 +149,8 @@ export const Productos = [
     ingredients: [
       "1 Raviolli Belmonte (Carne o Pollo).",
       "1 Salsa Belmonte (Tocineta ahumada o Cuatro Quesos o Napolitana)."
-    ]
+    ],
+    img: MilanoProduct
   }
 ]
 
