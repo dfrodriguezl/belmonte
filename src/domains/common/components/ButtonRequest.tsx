@@ -19,20 +19,22 @@ const styles = makeStyles((theme: Theme) => ({
 
 interface OwnProps {
   actionButton?: any;
+  message?: String;
 }
 
 type Props = OwnProps;
 const ButtonRequest = (props: Props) => {
   const classes = styles();
   const messageWpp = 'Hola Belmonte!!!, quiero hacer mi pedido, que tienes para esta semana?';
+  const { message } = props;
 
   const goToWpp = () => {
-    window.open("https://wa.me/573508214036?text=" + messageWpp, "_blank");
+    window.open("https://wa.me/573508214036?text=" + message, "_blank");
   }
 
   return (
     <Button variant="outlined" className={classes.button} onClick={() => goToWpp()}>
-      Pídelo &nbsp; <ShoppingCartIcon fontSize="small"/>
+      Pídelo &nbsp; <ShoppingCartIcon fontSize="small" />
     </Button>
   )
 }

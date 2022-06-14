@@ -132,7 +132,8 @@ export const Productos = [
       "1 Pasta Belmonte (Fetuccine o Fusilli).",
       "1 Salsa Belmonte (Tocineta ahumada o Cuatro Quesos o Napolitana)."
     ],
-    img: DuomoProduct
+    img: DuomoProduct,
+    message: "Hola Belmonte!!!, quiero un Duomo Kit - Cena excepcional para 3."
   },
   {
     name: 'Pantheon Kit.',
@@ -141,7 +142,8 @@ export const Productos = [
       "2 Pasta Belmonte (Fetuccine o Fusilli).",
       "2 Salsa Belmonte (Tocineta ahumada o Cuatro Quesos o Napolitana)."
     ],
-    img: PantheonProduct
+    img: PantheonProduct,
+    message: "Hola Belmonte!!!, quiero un Pantheon Kit - Cena excepcional para 6."
   },
   {
     name: 'Milano Kit.',
@@ -150,7 +152,8 @@ export const Productos = [
       "1 Raviolli Belmonte (Carne o Pollo).",
       "1 Salsa Belmonte (Tocineta ahumada o Cuatro Quesos o Napolitana)."
     ],
-    img: MilanoProduct
+    img: MilanoProduct,
+    message: "Hola Belmonte!!!, quiero un Milano Kit - Cena excepcional para 3."
   }
 ]
 

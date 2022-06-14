@@ -56,9 +56,7 @@ const HomeSup = () => {
                 {/* <img src={Home2} alt="Home 2" style={{ display: 'inline-block' }} width="40%" height="80%" />
                 <img src={Home1} alt="Home 1" style={{ display: 'inline-block' }} width="60%" height="80%" /> */}
                 <CarouselProducts />
-                <Grid xs={12} container item justify="center">
-                  <ButtonRequest />
-                </Grid>
+                
                 <Typography variant="subtitle2" className={classes.textDomicilio}>Servicio domicilio incluido en Bogotá: Rosales, Usaquén, Cedritos y Chia *.</Typography>
               </a>
               <a href={"https://wa.me/573508214036?text=" + messageWpp} target="_blank" rel="noreferrer">
