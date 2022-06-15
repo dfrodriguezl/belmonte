@@ -102,6 +102,14 @@ export interface Terrain {
   densityGeneral?: number;
 }
 
+export interface Product {
+  name?: string;
+  subtitle?: string;
+  ingredients?: string[];
+  img?: string;
+  message?: string;
+}
+
 export const Densities = [
   {
     value: 2,
@@ -124,7 +132,7 @@ export const Densities = [
   }
 ]
 
-export const Productos = [
+export const Productos : Product[] = [
   {
     name: 'Duomo Kit.',
     subtitle: 'Cena excepcional para 3.',

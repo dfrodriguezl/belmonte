@@ -3,6 +3,8 @@ import { Header } from 'domains/core/components'
 import { connect } from 'react-redux';
 import { RootState } from 'app/store';
 import HomeSup from './HomeSup';
+import { useHistory } from 'react-router-dom';
+import ListProducts from './ListProducts';
 
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -35,8 +37,11 @@ interface StateProps {
 
 type Props = OwnProps & StateProps;
 const PageContainer = (props: Props) => {
-  const { noHeader, background } = props;
+  const { noHeader, background, children } = props;
   const classes = useStyles();
+  const history = useHistory();
+
+  const isList = history.location.pathname.indexOf('list-products') > -1;
 
   return (
     <div className={background} style={{ overflow: 'none' }}>
@@ -49,7 +54,7 @@ const PageContainer = (props: Props) => {
             </Grid>
           }
           <Grid item container direction="row">
-            <HomeSup />
+            {!isList ? <HomeSup /> : children}
           </Grid>
         </Grid>
       </Container>
