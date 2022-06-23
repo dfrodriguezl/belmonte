@@ -1,3 +1,12 @@
 export {default as logoBelmonteWhite} from './logo-white-belmonte.png'
 export {default as Home1} from './home-1.jpg'
 export {default as Home2} from './home-2.png'
+
+export {default as DuomoProduct} from './duomo-product.png'
+export {default as VeronaProduct} from './verona-product.jpeg'
+export {default as PantheonProduct} from './pantheon-product.png'
+export {default as LasagnaProduct} from './lasagna-product.jpeg'
+export {default as FetucciniProduct} from './fetuccini-product.jpeg'
+export {default as FusilliProduct} from './fussili-product.jpeg'
+export {default as RavioliProduct} from './ravioli-product.jpeg'
+export {default as TotebagProduct} from './totebag-product.jpeg'

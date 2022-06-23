@@ -1,5 +1,6 @@
 import { Button, makeStyles, Theme } from '@material-ui/core';
 import React from 'react';
+import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 
 
 const styles = makeStyles((theme: Theme) => ({
@@ -18,20 +19,22 @@ const styles = makeStyles((theme: Theme) => ({
 
 interface OwnProps {
   actionButton?: any;
+  message?: String;
 }
 
 type Props = OwnProps;
 const ButtonRequest = (props: Props) => {
   const classes = styles();
   const messageWpp = 'Hola Belmonte!!!, quiero hacer mi pedido, que tienes para esta semana?';
+  const { message } = props;
 
   const goToWpp = () => {
-    window.open("https://wa.me/573508214036?text=" + messageWpp, "_blank");
+    window.open("https://wa.me/573508214036?text=" + message, "_blank");
   }
 
   return (
     <Button variant="outlined" className={classes.button} onClick={() => goToWpp()}>
-      Haz tu pedido
+      Pídelo &nbsp; <ShoppingCartIcon fontSize="small" />
     </Button>
   )
 }
