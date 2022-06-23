@@ -1,4 +1,4 @@
-import { DuomoProduct, MilanoProduct, PantheonProduct } from "assets";
+import { DuomoProduct, FetucciniProduct, FusilliProduct, LasagnaProduct, PantheonProduct, RavioliProduct, TotebagProduct, VeronaProduct } from "assets";
 
 export interface SearchParams {
   location: LocationSimple | undefined;
@@ -154,14 +154,49 @@ export const Productos : Product[] = [
     message: "Hola Belmonte!!!, quiero un Pantheon Kit - Cena excepcional para 6."
   },
   {
-    name: 'Milano Kit.',
-    subtitle: 'Cena excepcional para 3.',
+    name: 'Verona Kit.',
+    subtitle: 'Cena para 2. edición limitada',
     ingredients: [
       "1 Raviolli Belmonte (Carne o Pollo).",
-      "1 Salsa Belmonte (Tocineta ahumada o Cuatro Quesos o Napolitana)."
+      "1 Salsa Champiñones Belmonte edición limitada."
     ],
-    img: MilanoProduct,
-    message: "Hola Belmonte!!!, quiero un Milano Kit - Cena excepcional para 3."
+    img: VeronaProduct,
+    message: "Hola Belmonte!!!, quiero un Verona Kit - Cena excepcional para 2. edición limitada"
+  },
+  {
+    name: 'Lasagna artesanal Belmonte 500g*',
+    subtitle: '*Salsa no incluida',
+    ingredients: ['*Salsa no incluida'],
+    img: LasagnaProduct,
+    message: "Hola Belmonte!!!, quiero un Lasagna artesanal Belmonte 500g"
+  },
+  {
+    name: 'Fettucini Artesanal Belmonte 500g',
+    subtitle: '*Salsa no incluida',
+    ingredients: ['*Salsa no incluida'],
+    img: FetucciniProduct,
+    message: "Hola Belmonte!!!, quiero un Fettucini Artesanal Belmonte 500g"
+  },
+  {
+    name: 'Fusilli Artesanal Belmonte 500g',
+    subtitle: '*Salsa no incluida',
+    ingredients: ['*Salsa no incluida'],
+    img: FusilliProduct,
+    message: "Hola Belmonte!!!, quiero un Fusilli Artesanal Belmonte 500g"
+  },
+  {
+    name: 'Ravioli Artesanal Belmonte 250g (Carne o Pollo)',
+    subtitle: '*Salsa no incluida',
+    ingredients: ['*Salsa no incluida'],
+    img: RavioliProduct,
+    message: "Hola Belmonte!!!, quiero un Ravioli Artesanal Belmonte 250g (Carne o Pollo)"
+  },
+  {
+    name: 'Totebag Belmonte',
+    subtitle: '*Pasta no incluida',
+    ingredients: ['*Pasta no incluida'],
+    img: TotebagProduct,
+    message: "Hola Belmonte!!!, quiero un Totebag Belmonte"
   }
 ]
 
