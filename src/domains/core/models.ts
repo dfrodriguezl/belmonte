@@ -108,6 +108,7 @@ export interface Product {
   ingredients?: string[];
   img?: string;
   message?: string;
+  tipo?: string;
 }
 
 export const Densities = [
@@ -141,7 +142,8 @@ export const Productos : Product[] = [
       "1 Salsa Belmonte (Tocineta ahumada o Cuatro Quesos o Napolitana)."
     ],
     img: DuomoProduct,
-    message: "Hola Belmonte!!!, quiero un Duomo Kit - Cena excepcional para 3."
+    message: "Hola Belmonte!!!, quiero un Duomo Kit - Cena excepcional para 3.",
+    tipo: "kit"
   },
   {
     name: 'Pantheon Kit.',
@@ -151,7 +153,8 @@ export const Productos : Product[] = [
       "2 Salsa Belmonte (Tocineta ahumada o Cuatro Quesos o Napolitana)."
     ],
     img: PantheonProduct,
-    message: "Hola Belmonte!!!, quiero un Pantheon Kit - Cena excepcional para 6."
+    message: "Hola Belmonte!!!, quiero un Pantheon Kit - Cena excepcional para 6.",
+    tipo: "kit"
   },
   {
     name: 'Verona Kit.',
@@ -161,7 +164,8 @@ export const Productos : Product[] = [
       "1 Salsa Champiñones Belmonte edición limitada."
     ],
     img: VeronaProduct,
-    message: "Hola Belmonte!!!, quiero un Verona Kit - Cena excepcional para 2. edición limitada"
+    message: "Hola Belmonte!!!, quiero un Verona Kit - Cena excepcional para 2. edición limitada",
+    tipo: "kit"
   },
   {
     name: 'Lasagna artesanal Belmonte 500g*',
