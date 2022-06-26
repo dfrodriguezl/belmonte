@@ -42,7 +42,7 @@ const ProductTile = (props: Props) => {
   }
 
   return (
-    <Card className={classes.card}>
+    <Card className={classes.card} key={producto?.id}>
       <CardMedia image={producto?.img} title={producto?.name} component="img" className={classes.media} />
       <CardHeader>{producto?.name}</CardHeader>
       <CardContent>

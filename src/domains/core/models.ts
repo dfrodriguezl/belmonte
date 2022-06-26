@@ -103,6 +103,7 @@ export interface Terrain {
 }
 
 export interface Product {
+  id?: number;
   name?: string;
   subtitle?: string;
   ingredients?: string[];
@@ -135,6 +136,7 @@ export const Densities = [
 
 export const Productos : Product[] = [
   {
+    id: 1,
     name: 'Duomo Kit.',
     subtitle: 'Cena excepcional para 3.',
     ingredients: [
@@ -146,6 +148,7 @@ export const Productos : Product[] = [
     tipo: "kit"
   },
   {
+    id: 2,
     name: 'Pantheon Kit.',
     subtitle: 'Cena excepcional para 6.',
     ingredients: [
@@ -157,6 +160,7 @@ export const Productos : Product[] = [
     tipo: "kit"
   },
   {
+    id: 3,
     name: 'Verona Kit.',
     subtitle: 'Cena para 2. edición limitada',
     ingredients: [
@@ -168,6 +172,7 @@ export const Productos : Product[] = [
     tipo: "kit"
   },
   {
+    id: 4,
     name: 'Lasagna artesanal Belmonte 500g*',
     subtitle: '*Salsa no incluida',
     ingredients: ['*Salsa no incluida'],
@@ -175,6 +180,7 @@ export const Productos : Product[] = [
     message: "Hola Belmonte!!!, quiero un Lasagna artesanal Belmonte 500g"
   },
   {
+    id: 5,
     name: 'Fettucini Artesanal Belmonte 500g',
     subtitle: '*Salsa no incluida',
     ingredients: ['*Salsa no incluida'],
@@ -182,6 +188,7 @@ export const Productos : Product[] = [
     message: "Hola Belmonte!!!, quiero un Fettucini Artesanal Belmonte 500g"
   },
   {
+    id: 6,
     name: 'Fusilli Artesanal Belmonte 500g',
     subtitle: '*Salsa no incluida',
     ingredients: ['*Salsa no incluida'],
@@ -189,6 +196,7 @@ export const Productos : Product[] = [
     message: "Hola Belmonte!!!, quiero un Fusilli Artesanal Belmonte 500g"
   },
   {
+    id: 7,
     name: 'Ravioli Artesanal Belmonte 250g (Carne o Pollo)',
     subtitle: '*Salsa no incluida',
     ingredients: ['*Salsa no incluida'],
@@ -196,6 +204,7 @@ export const Productos : Product[] = [
     message: "Hola Belmonte!!!, quiero un Ravioli Artesanal Belmonte 250g (Carne o Pollo)"
   },
   {
+    id: 8,
     name: 'Totebag Belmonte',
     subtitle: '*Pasta no incluida',
     ingredients: ['*Pasta no incluida'],

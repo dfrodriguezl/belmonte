@@ -19,7 +19,6 @@ const CarouselProducts = () => {
   return (
     <Carousel>
       {Productos.filter((p) => p.tipo === "kit").map((producto, i) => {
-        
         return <Item producto={producto} key={i} />
       })}
     </Carousel>
