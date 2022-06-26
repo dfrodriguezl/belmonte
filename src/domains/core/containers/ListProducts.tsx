@@ -59,13 +59,12 @@ const ListProducts = () => {
       <Grid container className={classes.containerList}>
         <GridList cellHeight={'auto'}>
           {Productos.map((producto, index) =>
-            <GridListTile key={index}>
+            <GridListTile>
               <ProductTile producto={producto} />
             </GridListTile>
           )}
 
         </GridList>
-
       </Grid>
     </PageContainer>
 

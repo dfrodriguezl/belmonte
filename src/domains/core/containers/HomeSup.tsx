@@ -1,10 +1,12 @@
 import React from 'react';
-import { Container, Grid, makeStyles, Theme, useTheme, useMediaQuery, Typography, Avatar, Button } from '@material-ui/core';
+import { Container, Grid, makeStyles, Theme, useTheme, useMediaQuery, Typography, Avatar, Button, GridList, GridListTile, } from '@material-ui/core';
 import { useHistory } from 'react-router-dom';
 import { Home1, Home2 } from 'assets';
 import ButtonRequest from 'domains/common/components/ButtonRequest';
 import MessageIcon from '@material-ui/icons/Message';
 import CarouselProducts from 'domains/common/components/CarouselProducts';
+import { ProductTile } from 'domains/common/components';
+import { Productos } from '../models';
 
 const styles = makeStyles((theme: Theme) => ({
   background: {
@@ -41,6 +43,9 @@ const styles = makeStyles((theme: Theme) => ({
     background: '#0E3411',
     padding: '5px 40px',
     fontWeight: 'bolder'
+  },
+  containerList: {
+    padding: '40px 20px'
   }
 }));
 
@@ -80,6 +85,16 @@ const HomeSup = () => {
               <br />
               <Grid style={{ marginTop: 20, marginBottom: 20 }}>
                 <Button className={classes.buttonCatalog} onClick={() => toList()}>Catálogo de productos</Button>
+              </Grid>
+              <Grid container className={classes.containerList}>
+                <GridList cellHeight={'auto'}>
+                  {Productos.map((producto, index) =>
+                    <GridListTile key={index}>
+                      <ProductTile producto={producto}/>
+                    </GridListTile>
+                  )}
+
+                </GridList>
               </Grid>
             </Grid>
           </Grid> : ''
